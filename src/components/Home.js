@@ -42,25 +42,31 @@ class Home extends Component {
         return (
             <div className="apply_viewport_height">
                 <div className="home_container apply_viewport_height">
-                <img src="./tomatoman.png" alt="Logo" style={{ width: '10%'}}/>
-                <Card className="home_container " border="danger" style={{ height: '40%'}}>
-                    <Card.Body style={{width: '275.5px'}}>
+                <img src="./tomatoman.png" alt="Logo" className="tomato_man" style={{ width: '10%'}}/>
+                <Card className="home_container " border="danger">
+                    <Card.Body style={{width: '450px'}}>
                     <Typist>
-                    TEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXT
+                    Hello! I am a little tomato man and this is a pomodoro timer. 
                     <br/>
                     <br/>
-                    <Typist.Delay ms={500} />
-                    BLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCK
-
+                    We'll work in 25 minute intervals (pomodoros) with 3 short breaks. After your fourth pomodoro, take a long break (you deserve it). Then back to work it is!
+                    <br/>
+                    <br/>
+                    Each pomodoro session will get easier~
+                    <br/>
+                    <br/>
+                    I've set up some podcasts and jokes for you during your break periods. Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!
                     
                     </Typist>
-                        <form onSubmit={this.submitting} className="home-main">
+                        <form onSubmit={this.submitting} >
                     {/* <label className="home-main_text">
                     </label> */}
                     <div>
-                        <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input"/>
+                        <br/>
+                        <br/>
+                        <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter category here" style={{width:'80%'}}/>
                         
-                        <Link to="/maintimer"><input type="submit" value="Submit" className="home-main_submit"/> </Link>
+                        <Link to="/maintimer"><input type="submit" value="Submit" className="submit_button"/> </Link>
                         
                     </div>
                 </form>

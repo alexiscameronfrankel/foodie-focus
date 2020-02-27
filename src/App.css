@@ -38,6 +38,12 @@
    
  }
 
+ .makeItWork{
+   margin:20px;
+   width:233px;
+   height:370px;
+ }
+
  .paddingTime{
    margin:50px 200px;
  }
@@ -52,7 +58,20 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-size: 1.7rem;
   
+}
+
+.tomato_man{
+  margin-bottom:-5px;
+}
+
+.submit_button{
+  color:white;
+  background-color: #6D435A;
+  padding: 1px 10px;
+  margin-left:10px;
+
 }
 
 .apply_viewport_height{

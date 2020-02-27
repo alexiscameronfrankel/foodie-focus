@@ -88,7 +88,7 @@ class Longbreak extends Component {
 
 
 
-            <Card className ="paddingTime" bg="dark" text="white" border="warning"  style={{ width: '18rem' }}>
+            <Card className="makeItWork" bg="dark" text="white" border="warning">
             <Card.Img variant="top" src={eachPodcast.image} alt={eachPodcast.title_original} />
             <Card.Body>
                 <Card.Title>{eachPodcast.title_original}</Card.Title>
