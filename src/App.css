@@ -81,3 +81,17 @@
 #root {
   min-height: 100vh;
 }
+
+.mainTimerStylesButton{
+  background-color: #6D435A;
+  color:white;
+  border-radius: 10px;
+  padding:10px 30px;
+  font-size: 3em;
+  margin:20px;
+  
+}
+
+.mainTimer{
+  font-size:11em;
+}

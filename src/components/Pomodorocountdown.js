@@ -32,7 +32,7 @@ changeRenderPomodoroAmount = () => {
 
     render() {
         return (
-     <div>
+     <div className="apply_viewport_height ">
 
 
         {/* HERE  A BUTTON THAT LINKS TO THE HOME PAGE TO CHANGE CATEGORY  */}
@@ -44,6 +44,7 @@ changeRenderPomodoroAmount = () => {
         {/* BELOW IS MY Timer */}
 
         <Timer
+            className="mainTimerStyles"
             initialTime={10000}
             direction="backward"
             startImmediately={false}
@@ -72,18 +73,18 @@ changeRenderPomodoroAmount = () => {
                 <div>
                     {/* <Timer.Days /> days
                     <Timer.Hours /> hours */}
-                    <Timer.Minutes /> minutes
-                    <Timer.Seconds /> seconds
+                    <span className="mainTimer"> <Timer.Minutes />:
+                    <Timer.Seconds /></span>
                     {/* <Timer.Milliseconds /> milliseconds */}
                 </div>
                 {/* <div>{timerState}</div> */}
                 <br />
                 <div>
-                    <button onClick={start}>Start</button>
-                    <button onClick={pause}>Pause</button>
-                    <button onClick={resume}>Resume</button>
-                    <button onClick={stop}>Stop</button>
-                    <button onClick={reset}>Reset</button>
+                    <button className="mainTimerStylesButton" onClick={start}>Start</button>
+                    <button className="mainTimerStylesButton"  onClick={pause}>Pause</button>
+                    <button className="mainTimerStylesButton"  onClick={resume}>Resume</button>
+                    <button className="mainTimerStylesButton"  onClick={stop}>Stop</button>
+                    <button className="mainTimerStylesButton"  onClick={reset}>Reset</button>
                 </div>
             </React.Fragment>
         )}

@@ -27,9 +27,13 @@ class Home extends Component {
     submitting = (e) => {
         e.preventDefault()
       
+        console.log('home.js submit')
         let category = this.state.name;
 
         this.props.handlePersonInputting(category)
+
+        this.props.history.push("/maintimer")
+
     
       
       }
@@ -58,18 +62,20 @@ class Home extends Component {
                     I've set up some podcasts and jokes for you during your break periods. Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!
                     
                     </Typist>
-                        <form onSubmit={this.submitting} >
+                    <br/>
+                    <br/>
+                    <div>
+                        <form onSubmit={this.submitting}>
                     {/* <label className="home-main_text">
                     </label> */}
-                    <div>
-                        <br/>
-                        <br/>
+                    
                         <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter category here" style={{width:'80%'}}/>
                         
-                        <Link to="/maintimer"><input type="submit" value="Submit" className="submit_button"/> </Link>
+                        {/* <Link to="/maintimer"><input type="submit" value="Submit" className="submit_button"/> </Link> */}
+                        <input type="submit" value="Submit" className="submit_button"/>
                         
-                    </div>
-                </form>
+                                 </form>
+                        </div>
                     </Card.Body>
                 </Card>
               
