@@ -43,10 +43,14 @@ class Home extends Component {
             <div className="apply_viewport_height">
                 <div className="home_container apply_viewport_height">
                 <img src="./tomatoman.png" alt="Logo" style={{ width: '10%'}}/>
-                <Card className="home_container " border="danger" style={{ width: '50%'}}>
-                    <Card.Body>
+                <Card className="home_container " border="danger" style={{ height: '40%'}}>
+                    <Card.Body style={{width: '275.5px'}}>
                     <Typist>
-                        Hello! I am a little tomato man and this a tomato timer!
+                    TEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXT
+                    <br/>
+                    <br/>
+                    <Typist.Delay ms={500} />
+                    BLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCKTEXTBLOCK
 
                     
                     </Typist>
