@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import Card from 'react-bootstrap/Card';
+import Typist from 'react-typist';
 
 
 class Home extends Component {
@@ -40,12 +41,15 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="row d-flex justify-content-center">
-                <Card className="home_container col-sm-6 " border="danger" style={{ width: '50%'}}>
-                    <Card.Img variant="top" src="./tomatoman.png" style={{ width: '30%'}}/>
+                <div className="home_container">
+                <img src="./tomatoman.png" alt="Logo" style={{ width: '10%'}}/>
+                <Card className="home_container " border="danger" style={{ width: '50%'}}>
                     <Card.Body>
-                        Enter your podcast genre (ex:meditation, nutrition, dogs)
-                        Halvah croissant biscuit fruitcake topping. Croissant apple pie pie. Cookie jelly bear claw powder candy canes marshmallow soufflé cake. Powder sugar plum croissant candy croissant gummi bears. Donut jelly beans ice cream liquorice ice cream cake. Marzipan cake icing chupa chups dragée jujubes tart. Bonbon cake chupa chups wafer chupa chups marshmallow sesame snaps.
+                    <Typist>
+                        Hello! I am a little tomato man and this a tomato timer!
+
+                    
+                    </Typist>
                         <form onSubmit={this.submitting} className="home-main">
                     {/* <label className="home-main_text">
                     </label> */}

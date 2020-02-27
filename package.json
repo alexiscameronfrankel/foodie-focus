@@ -15,6 +15,7 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-typist": "^2.0.5",
     "tasktimer": "^3.0.0",
     "uifx": "^2.0.7"
   },
