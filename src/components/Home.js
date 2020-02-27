@@ -40,8 +40,8 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <div className="home_container">
+            <div className="apply_viewport_height">
+                <div className="home_container apply_viewport_height">
                 <img src="./tomatoman.png" alt="Logo" style={{ width: '10%'}}/>
                 <Card className="home_container " border="danger" style={{ width: '50%'}}>
                     <Card.Body>
@@ -53,12 +53,12 @@ class Home extends Component {
                         <form onSubmit={this.submitting} className="home-main">
                     {/* <label className="home-main_text">
                     </label> */}
-                    {/* <div> */}
+                    <div>
                         <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input"/>
                         
                         <Link to="/maintimer"><input type="submit" value="Submit" className="home-main_submit"/> </Link>
                         
-                    {/* </div> */}
+                    </div>
                 </form>
                     </Card.Body>
                 </Card>

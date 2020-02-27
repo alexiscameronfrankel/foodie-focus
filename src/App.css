@@ -47,7 +47,18 @@
  }
 
  .home_container{
-  margin: auto;
-  position: relative;
-  top:30vh;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.apply_viewport_height{
+  height:100vh;
+}
+
+#root {
+  min-height: 100vh;
 }
