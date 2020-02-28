@@ -53,13 +53,13 @@ class Home extends Component {
                     Hello! I am a little tomato man and this is a pomodoro timer. 
                     <br/>
                     <br/>
-                    We'll work in 25 minute intervals (pomodoros) with 3 short breaks. After your fourth pomodoro, take a long break (you deserve it). Then back to work it is!
+                    We'll work in <strong>25 minute intervals </strong> (pomodoros) with <strong>3 short breaks</strong>. After your <strong>fourth</strong> pomodoro, take a <strong>long break</strong> (you deserve it). Repeat as necessary!
                     <br/>
                     <br/>
                     Each pomodoro session will get easier~
                     <br/>
                     <br/>
-                    I've set up some podcasts and jokes for you during your break periods. Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!
+                    I've set up some podcasts and jokes for you during your break periods. <strong>Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!</strong>
                     
                     </Typist>
                     <br/>

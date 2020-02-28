@@ -4,6 +4,10 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import {Link} from "react-router-dom"; 
 import Timer from 'react-compound-timer'
+import Navbar from './Navbar'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 
 let alarm = new Audio("./alarm.mp3")
@@ -136,8 +140,8 @@ class Longbreak extends Component {
           
           
             // }) 
-          console.log(this.state.name)
-          console.log('submit button is being pressed for long break')
+          // console.log(this.state.name)
+          // console.log('submit button is being pressed for long break')
           
           
           
@@ -159,32 +163,23 @@ class Longbreak extends Component {
         }
 
 
-      
-
-        
-        
-
-
-    
-    
-    
-    
-    
-    
+    // RENDERS BELOW
     
       render() {
       console.log(this.props)
         return (
           <div>
-
-        {/* HERE  A BUTTON THAT LINKS TO THE HOME PAGE TO CHANGE CATEGORY  */}
-
-
-        <Link to="/"> <Button variant="primary">CHANGE CATEGORY</Button></Link>
+          <Navbar/>
 
 
          {/* BELOW IS MY Timer */}
 
+
+
+<Container>
+<Row>
+<Col>
+<div className="breakTimerContainer">
    <Timer
             initialTime={10000}
             direction="backward"
@@ -231,23 +226,27 @@ class Longbreak extends Component {
         )}
     </Timer>
 
+</div>
+</Col>
+<Col>
+     {/* HERE IS THE JOKE BUTTON BELOW */}
 
-
-        {/* HERE  A BUTTON THAT LINKS TO THE TIMER  */}
-
-
-
-        <Link to="/maintimer"><Button variant="primary">LINK TO MY MAIN TIMER</Button></Link>
-
+<div className="jokeContainer">
         <p>{this.state.jokes}</p>
         <button onClick={this.getAJoke}>Click here to LOL</button>
+</div>
+</Col>
+</Row>
+</Container>
+
+    {/* THIS SHOWS THE podcasts BELOW*/}
 
         <div className="flexin">
             {this.showThePodcasts(this.state.podcasts)}
         </div>
 
 
-        {/* HERE IS THE JOKE BUTTON BELOW */}
+       
 
 
           </div>

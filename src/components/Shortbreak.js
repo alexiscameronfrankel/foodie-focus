@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from "axios";
 import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
-import Timer from 'react-compound-timer'
+import Timer from 'react-compound-timer';
+import Navbar from './Navbar'
 
 
 
@@ -138,10 +139,7 @@ console.log('submit button is being pressed')
     return (
       <div>
 
-{/* 
-HERE IS MY LINK TO THE THE MAIN TIMER  */}
-
-<Link to="/maintimer"> <Button variant="primary">LINK TO MY MAIN TIMER</Button></Link>
+    <Navbar/>
 
 
   {/* BELOW IS MY Timer */}

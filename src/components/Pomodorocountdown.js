@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Timer from 'react-compound-timer'
 import {Link} from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
+import Navbar from './Navbar';
 
 
 let alarm = new Audio("./alarm.mp3")
@@ -32,15 +33,13 @@ changeRenderPomodoroAmount = () => {
 
     render() {
         return (
-     <div className="apply_viewport_height ">
+     <div className="apply_viewport_height  mainTimerBackground">
 
+        <Navbar/>
 
-        {/* HERE  A BUTTON THAT LINKS TO THE HOME PAGE TO CHANGE CATEGORY  */}
+    <section id="centerContainer">
 
-
-        <Link to="/"> <Button variant="primary">CHANGE CATEGORY</Button></Link>
-
-
+        <div className = "mainTimerContainer">
         {/* BELOW IS MY Timer */}
 
         <Timer
@@ -73,8 +72,8 @@ changeRenderPomodoroAmount = () => {
                 <div>
                     {/* <Timer.Days /> days
                     <Timer.Hours /> hours */}
-                    <span className="mainTimer"> <Timer.Minutes />:
-                    <Timer.Seconds /></span>
+                    <span className="mainTimer"> <Timer.Minutes /><span className="mainTimer_smallerWords"> minutes</span>
+                    <Timer.Seconds /><span className="mainTimer_smallerWords">seconds</span></span>
                     {/* <Timer.Milliseconds /> milliseconds */}
                 </div>
                 {/* <div>{timerState}</div> */}
@@ -96,20 +95,25 @@ changeRenderPomodoroAmount = () => {
 
 
 
-<p>You have done {this.props.pomodoro} pomodoros</p>
+<p className="pomodoroDisplayStyles">You have done {this.props.pomodoro} pomodoros</p>
 
 
 
 
 
 {/* HERE ARE MY BREAK BUTTONS */}
-            
-            <Link to="/longbreak"><Button size="lg" variant="danger">Long Break</Button></Link>
-            <Link to="/shortbreak"><Button size="lg" variant="warning">Short Break</Button></Link>
+<div>
 
-            
+<Link to="/longbreak"><Button variant="outline-danger" className="iMakeButtonSmaller">Long Break</Button></Link>
+<Link to="/shortbreak"><Button variant="outline-danger" className="iMakeButtonSmaller">Short Break</Button></Link>
+
+</div>     
+           
+            </div>       
+
+    </section>  
                 
-            </div>
+</div>
         );
     }
 }

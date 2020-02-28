@@ -55,44 +55,6 @@ changeRenderPomodoroAmount = () => {
 }
 
 
-
-
-/// BUGS: on second press...name becomes ""...on third submit name becomes undefined
-
-// submitting = (e) => {
-//   e.preventDefault()
-//   this.setState({
-        
-        
-//     name:e.target.value
-    
-
-
-//   }) 
-// console.log(this.state)
-// console.log('submit button is being pressed')
-
-
-
-//   let category = this.state.name;
-
-//   if(this.state.name !== "") {
-
-//     axios.get(`https://listen-api.listennotes.com/api/v2/search?q=${category}&sort_by_date=0&type=episode&len_min=4&len_max=6&only_in=title%2Cdescription&language=English`,{headers: {'X-ListenAPI-Key': '4a61357b39b247419a27150332f26732'}}).then(res => { //This takes some time by the time it gets back 
-//     // console.log(res)
-//       this.setState({
-//         podcasts:res.data.results,
-//         name: "",
-//         image: "",
-//         title_original:"",
-//         audio:""
-//       }) 
-//     })
-//   }
-
-// }
-
-
   render() {
   
     return (
