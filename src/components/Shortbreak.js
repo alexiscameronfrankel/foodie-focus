@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import {Link} from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Timer from 'react-compound-timer';
+import Card from 'react-bootstrap/Card';
+import {Link} from "react-router-dom"; 
+import Timer from 'react-compound-timer'
 import Navbar from './Navbar'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 
 
@@ -14,63 +17,67 @@ class Shortbreak extends Component {
 
   state = {
     podcasts: [],
+    jokes: [],
     name: "",
     image: "",
     title_original:"",
-    audio:""
-
+    audio:"",
+ 
   }
-
 
 
   playAlarm = () => {
     alarm.play();
     }
 
-    
-    componentDidMount(){
 
-      // doing a get request based on the catergory that was entered in Home component
-      console.log("we are mounting, yeeha!")
-      console.log(this.props)
-      this.newGetRequestForPodcast()
+ componentDidMount(){
 
-        //this gets an initial joke
-        this.getAJoke() //equivalent to clicking the button
+  // doing a get request based on the catergory that was entered in Home component
+  console.log("we are mounting, yeeha!")
+  console.log(this.props)
+  this.newGetRequestForPodcast()
 
-      } 
+    //this gets an initial joke
+    this.getAJoke() //equivalent to clicking the button
 
-      newGetRequestForPodcast = () => {
-        if(this.props.categorychosen !== "") {
-          
-          axios.get(`https://listen-api.listennotes.com/api/v2/search?q=${this.props.categorychosen}&sort_by_date=0&type=episode&len_min=9&len_max=11&only_in=title%2Cdescription&language=English`,{headers: {'X-ListenAPI-Key': '4a61357b39b247419a27150332f26732'}}).then(res => { //This takes some time by the time it gets back 
-          // console.log(res)
-            this.setState({
-              podcasts:res.data.results,
-              image: "",
-              title_original:"",
-              audio:""
-            }) 
-          })
-        }
-      }
+  } 
 
-
-   
-
- 
-      getAJoke = () => {
-
-        ///HERE IS THE JOKES API GET REQUEST///
-
-        axios.get(`https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,racist,sexist&type=single`).then(res => { //This takes some time by the time it gets back 
-        console.log(res)
-                this.setState({
-                jokes:res.data.joke
-                    }) 
-                })
+  newGetRequestForPodcast = () => {
+    if(this.props.categorychosen !== "") {
+      
+      axios.get(`https://listen-api.listennotes.com/api/v2/search?q=${this.props.categorychosen}&sort_by_date=0&type=episode&len_min=4&len_max=6&only_in=title%2Cdescription&language=English`,{headers: {'X-ListenAPI-Key': '4a61357b39b247419a27150332f26732'}}).then(res => { //This takes some time by the time it gets back 
+      // console.log(res)
+        this.setState({
+          podcasts:res.data.results,
+          image: "",
+          title_original:"",
+          audio:""
+        }) 
+      })
     }
-    
+  }
+
+
+
+
+
+  getAJoke = () => {
+
+    ///HERE IS THE JOKES API GET REQUEST///
+
+    axios.get(`https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,racist,sexist&type=single`).then(res => { //This takes some time by the time it gets back 
+    console.log(res)
+            this.setState({
+            jokes:res.data.joke
+                }) 
+            })
+}
+
+
+  // 1. use math.random to pick a random podcast???
+
+
   
 
   showThePodcasts = (parameter) => { 
@@ -79,124 +86,177 @@ class Shortbreak extends Component {
     return parameter.map(eachPodcast => {
       // console.log(eachPodcast)
       return (
-      <div>
-      <img src={eachPodcast.image} alt={eachPodcast.title_original}/>
-      <p>{eachPodcast.title_original}</p>
-      <audio controls>
-        <source src={eachPodcast.audio} type="audio/mpeg" />
-      </audio>
-      </div>
+
+    <span>
+
+
+
+
+        <Card className="makeItWork" bg="dark" text="white" border="warning">
+        <Card.Img variant="top" src={eachPodcast.image} alt={eachPodcast.title_original} />
+        <Card.Body>
+            <Card.Title>{eachPodcast.title_original}</Card.Title>
+            <Card.Text>
+            <audio className="audioStyle" controls>
+                    <source src={eachPodcast.audio} type="audio/mpeg" />
+            </audio>
+            </Card.Text>
+        
+        </Card.Body>
+        </Card>
+
+
+
+
+
+    </span>
       )
     })
   }
 
 
-
-
-/// BUGS: on second press...name becomes ""...on third submit name becomes undefined
-
-submitting = (e) => {
-  e.preventDefault()
-  // this.setState({
-        
-        
-  //   name:e.target.value
+//   handlePersonTyping = (e) => {
     
+//     this.setState({
+        
+        
+//         [e.target.name]:e.target.value,
+    
+    
+//     }) 
 
-
-  // }) 
-console.log(this.state.name)
-console.log('submit button is being pressed')
-
-
-
-  let category = this.state.name;
-
-  if(this.state.name !== "") {
-
-  axios.get(`https://listen-api.listennotes.com/api/v2/search?q=${category}&sort_by_date=0&type=episode&len_min=4&len_max=6&only_in=title%2Cdescription&language=English`,{headers: {'X-ListenAPI-Key': '4a61357b39b247419a27150332f26732'}}).then(res => { //This takes some time by the time it gets back 
-  // console.log(res)
-    this.setState({
-      podcasts:res.data.results,
-      image: "",
-      title_original:"",
-      audio:""
-    }) 
-  })
-}
-
-}
+    
+// }
 
 
 
 
 
+      submitting = (e) => {
+        e.preventDefault()
+        // this.setState({}
+        //   name:e.target.value
+          
+      
+      
+        // }) 
+      // console.log(this.state.name)
+      // console.log('submit button is being pressed for long break')
+      
+      
+      
+        // let category = this.state.name;
+      
+        if(this.state.name !== "") {
+      
+        axios.get(`https://listen-api.listennotes.com/api/v2/search?q=${this.props.category}&sort_by_date=0&type=episode&len_min=4&len_max=6&only_in=title%2Cdescription&language=English`,{headers: {'X-ListenAPI-Key': '4a61357b39b247419a27150332f26732'}}).then(res => { //This takes some time by the time it gets back 
+        // console.log(res)
+          this.setState({
+            podcasts:res.data.results,
+            image: "",
+            title_original:"",
+            audio:""
+          }) 
+        })
+      }
+    
+    }
 
 
+// RENDERS BELOW
 
   render() {
-    // console.log(this.state.name) //WHY IS THIS UNDEFINED???
+  console.log(this.props)
     return (
-      <div>
+      <div id="longBreakBackground">
+      <Navbar/>
 
-    <Navbar/>
+
+     {/* BELOW IS MY Timer */}
 
 
-  {/* BELOW IS MY Timer */}
 
-   <Timer
-            initialTime={10000}
-            direction="backward"
-            startImmediately={false}
-            timeToUpdate={100}
-            checkpoints={[
-                {
-                    time: 0,
-                    callback: () => this.playAlarm(), 
-                },
-                {
-                    time: 0,
-                    callback: () => console.log('alarm is sounding'), 
-                },
-                // {
-                //     time: 0,
-                //     callback: () =>this.props.changeRenderPomodoroAmount(this.props.pomodoro),
-                // },
-                // {
-                //     time: 0,
-                //     callback: () =>console.log(`You have done ${this.props.pomodoro} pomodoros`),
-                // }
-            ]}
-        >
-        {({ start, resume, pause, stop, reset }) => (
-            <React.Fragment>
-                <div>
-                    {/* <Timer.Days /> days
-                    <Timer.Hours /> hours */}
-                    <Timer.Minutes /> minutes
-                    <Timer.Seconds /> seconds
-                    {/* <Timer.Milliseconds /> milliseconds */}
-                </div>
-                {/* <div>{timerState}</div> */}
-                <br />
-                <div>
-                    <button onClick={start}>Start</button>
-                    <button onClick={pause}>Pause</button>
-                    <button onClick={resume}>Resume</button>
-                    <button onClick={stop}>Stop</button>
-                    <button onClick={reset}>Reset</button>
-                </div>
-            </React.Fragment>
-        )}
-    </Timer>
+<Container>
+<Row>
+<Col>
+<div className="breakTimerContainer">
+<Timer
+        initialTime={10000}
+        direction="backward"
+        startImmediately={false}
+        timeToUpdate={100}
+        checkpoints={[
+            {
+                time: 0,
+                callback: () => this.playAlarm(), 
+            },
+            {
+                time: 0,
+                callback: () => console.log('alarm is sounding'), 
+            },
+            // {
+            //     time: 0,
+            //     callback: () =>this.props.changeRenderPomodoroAmount(this.props.pomodoro),
+            // },
+            // {
+            //     time: 0,
+            //     callback: () =>console.log(`You have done ${this.props.pomodoro} pomodoros`),
+            // }
+        ]}
+    >
+    {({ start, resume, pause, stop, reset }) => (
+        <React.Fragment>
+            <div>
+                {/* <Timer.Days /> days
+                <Timer.Hours /> hours */}
+                <Timer.Minutes /> minutes
+                <Timer.Seconds /> seconds
+                {/* <Timer.Milliseconds /> milliseconds */}
+            </div>
+            {/* <div>{timerState}</div> */}
+            <br />
+            <div>
+                <button className="breakTimerStylesButton" onClick={start}>Start</button>
+                <button className="breakTimerStylesButton" onClick={pause}>Pause</button>
+                <button className="breakTimerStylesButton" onClick={resume}>Resume</button>
+                <button className="breakTimerStylesButton" onClick={stop}>Stop</button>
+                <button className="breakTimerStylesButton" onClick={reset}>Reset</button>
+            </div>
+            <div>
+            <Link  to="/maintimer"><button className="breakContainerButtons" >Get Back To Work</button></Link>
+            </div>
+        </React.Fragment>
+    )}
+</Timer>
 
-<p>{this.state.jokes}</p>
-        <button onClick={this.getAJoke}>Click here to LOL</button>
+</div>
+</Col>
+<Col>
+ {/* HERE IS THE JOKE BUTTON BELOW */}
+
+<div className="jokeContainer">
+    <p>{this.state.jokes}</p>
+    <button className="breakContainerButtons" onClick={this.getAJoke}>Click here to LOL</button>
+</div>
+</Col>
+</Row>
+</Container>
+
+{/* THIS SHOWS THE podcasts BELOW*/}
+
+    <div className="flexin">
         {this.showThePodcasts(this.state.podcasts)}
+    </div>
+
+
+   
+
+
       </div>
     );
   }
 }
+
 
 
 

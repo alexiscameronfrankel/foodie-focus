@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import {Link} from "react-router-dom"; 
 import Timer from 'react-compound-timer'
 import Navbar from './Navbar'
