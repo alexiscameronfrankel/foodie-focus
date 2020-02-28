@@ -94,7 +94,7 @@ class Longbreak extends Component {
             <Card className="makeItWork" bg="dark" text="white" border="warning">
             <Card.Img variant="top" src={eachPodcast.image} alt={eachPodcast.title_original} />
             <Card.Body>
-                <Card.Title>{eachPodcast.title_original}</Card.Title>
+                <Card.Title id="cardTitle">{eachPodcast.title_original}</Card.Title>
                 <Card.Text>
                 <audio className="audioStyle" controls>
                         <source src={eachPodcast.audio} type="audio/mpeg" />
@@ -180,7 +180,7 @@ class Longbreak extends Component {
 <Col>
 <div className="breakTimerContainer">
    <Timer
-            initialTime={10000}
+            initialTime={3000}
             direction="backward"
             startImmediately={false}
             timeToUpdate={100}

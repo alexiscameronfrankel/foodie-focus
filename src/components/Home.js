@@ -49,7 +49,7 @@ class Home extends Component {
                 <img src="./tomatoman.png" alt="Logo" className="tomato_man" style={{ width: '10%'}}/>
                 <Card className="home_container " border="danger">
                     <Card.Body style={{width: '450px'}}>
-                    <Typist>
+                    <Typist className="Typist">
                     Hello! I am a little tomato man and this is a pomodoro timer. 
                     <br/>
                     <br/>

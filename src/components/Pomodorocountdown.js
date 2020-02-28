@@ -44,7 +44,7 @@ changeRenderPomodoroAmount = () => {
 
         <Timer
             className="mainTimerStyles"
-            initialTime={10000}
+            initialTime={5000}
             direction="backward"
             startImmediately={false}
             timeToUpdate={100}
