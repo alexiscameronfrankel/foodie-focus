@@ -34,6 +34,10 @@
    display:flex;
    flex-direction: row;
    flex-wrap: wrap;
+   justify-content: center;
+    align-items: center;
+   margin-top:50px;
+
 
    
  }
@@ -44,8 +48,12 @@
  .makeItWork{
    margin:20px;
    width:233px;
-   height:370px;
+   height:450px;
  }
+
+ .makeItWork > h5{
+  font-size:2em;
+}
 
  .paddingTime{
    margin:50px 200px;
@@ -172,10 +180,68 @@ nav{
 background-color:#FFFCF9;
 border-radius:10px;
 padding:20px;
+height:400px;
+display:flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+font-size: 3em;
 }
 
 .jokeContainer {
-background-color:#FFFCF9;
+background-color:#f1e8dc;
 border-radius:10px;
 padding:20px;
+height: 400px;
+display:flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+margin-top:20px;
+font-size: 2em;
+line-height: 40px;
+}
+
+#longBreakBackground{
+  background-color: #E8606E;
+}
+
+.breakTimerStylesButton{
+  background-color: #6D435A;
+  color:white;
+  border-radius: 10px;
+  padding:10px 20px;
+  font-size: 0.6em;
+  margin:4px;
+  transform: translateY(0);
+  transition: all .2s ease-in-out;
+}
+
+.breakTimerStylesButton:hover {
+  transform: translateY(-.2rem);
+  background-color: #4e3041;
+  box-shadow: 0 .3rem .3rem rgba(0, 0, 0, .5);
+}
+
+.breakTimerStylesButton:focus,
+.breakTimerStylesButton:active{
+  outline:none;
+}
+
+.breakTimerStylesButton:active {
+  transform: translateY(.1rem);
+  background-color: #3b2532;
+  box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .5);
+}
+
+.breakContainerButtons {
+  font-size:20px;
+  background-color:#BE4F5B;
+  border-radius: 10px;
+  padding:5px;
+  margin-top:50px;
+  color:white;
 }

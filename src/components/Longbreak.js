@@ -168,7 +168,7 @@ class Longbreak extends Component {
       render() {
       console.log(this.props)
         return (
-          <div>
+          <div id="longBreakBackground">
           <Navbar/>
 
 
@@ -216,11 +216,14 @@ class Longbreak extends Component {
                 {/* <div>{timerState}</div> */}
                 <br />
                 <div>
-                    <button onClick={start}>Start</button>
-                    <button onClick={pause}>Pause</button>
-                    <button onClick={resume}>Resume</button>
-                    <button onClick={stop}>Stop</button>
-                    <button onClick={reset}>Reset</button>
+                    <button className="breakTimerStylesButton" onClick={start}>Start</button>
+                    <button className="breakTimerStylesButton" onClick={pause}>Pause</button>
+                    <button className="breakTimerStylesButton" onClick={resume}>Resume</button>
+                    <button className="breakTimerStylesButton" onClick={stop}>Stop</button>
+                    <button className="breakTimerStylesButton" onClick={reset}>Reset</button>
+                </div>
+                <div>
+                <Link  to="/maintimer"><button className="breakContainerButtons" >Get Back To Work</button></Link>
                 </div>
             </React.Fragment>
         )}
@@ -233,7 +236,7 @@ class Longbreak extends Component {
 
 <div className="jokeContainer">
         <p>{this.state.jokes}</p>
-        <button onClick={this.getAJoke}>Click here to LOL</button>
+        <button className="breakContainerButtons" onClick={this.getAJoke}>Click here to LOL</button>
 </div>
 </Col>
 </Row>
