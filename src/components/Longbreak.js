@@ -208,8 +208,8 @@ class Longbreak extends Component {
                 <div>
                     {/* <Timer.Days /> days
                     <Timer.Hours /> hours */}
-                    <Timer.Minutes /> minutes
-                    <Timer.Seconds /> seconds
+                    <Timer.Minutes /><span className="break_smallerWords">minutes</span> 
+                    <Timer.Seconds /><span className="break_smallerWords">seconds</span> 
                     {/* <Timer.Milliseconds /> milliseconds */}
                 </div>
                 {/* <div>{timerState}</div> */}

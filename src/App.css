@@ -187,7 +187,7 @@ flex-wrap: nowrap;
 justify-content: center;
 align-items: center;
 margin-top: 20px;
-font-size: 3em;
+font-size: 4rem;
 }
 
 .jokeContainer {
@@ -252,4 +252,9 @@ line-height: 40px;
 
 .Typist{
   font-size: 18px;
+}
+
+.break_smallerWords{
+  color: #BE4F5B;
+  font-size: 1.5rem;
 }
