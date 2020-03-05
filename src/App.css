@@ -74,14 +74,14 @@
 }
 
 .tomato_man{
-  margin-bottom:-5px;
+  margin-bottom:-3px;
 }
 
 .submit_button{
   color:white;
   background-color: #6D435A;
-  padding: 1px 10px;
-  margin-left:10px;
+  padding: 1px 5px;
+  margin-left: 5px;
 
 }
 
@@ -257,4 +257,8 @@ line-height: 40px;
 .break_smallerWords{
   color: #BE4F5B;
   font-size: 1.5rem;
+}
+
+.homeBackground{
+  background-color: #B1EDE8;
 }

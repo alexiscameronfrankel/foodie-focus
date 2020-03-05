@@ -44,9 +44,9 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="apply_viewport_height">
+            <div className="apply_viewport_height homeBackground">
                 <div className="home_container apply_viewport_height">
-                <img src="./tomatoman.png" alt="Logo" className="tomato_man" style={{ width: '10%'}}/>
+                <img src="./tomatoman.png" alt="Logo" className="tomato_man" style={{ width: '90px'}}/>
                 <Card className="home_container " border="danger">
                     <Card.Body style={{width: '450px'}}>
                     <Typist className="Typist">
