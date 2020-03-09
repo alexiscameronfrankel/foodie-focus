@@ -246,6 +246,13 @@ line-height: 40px;
   color:white;
 }
 
+/* what this does below is remove default outline when a button is pressed  */
+
+.breakContainerButtons:focus, 
+.breakContainerButtons:active{
+  outline:none;
+}
+
 #cardTitle{
   font-size:20px;
 }
