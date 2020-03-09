@@ -253,6 +253,14 @@ line-height: 40px;
   outline:none;
 }
 
+/* cool shadow affect on the buttons when clicked  */
+
+.breakContainerButtons:active {
+  transform: translateY(.1rem);
+  background-color: #3b2532;
+  box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .5);
+}
+
 #cardTitle{
   font-size:20px;
 }
