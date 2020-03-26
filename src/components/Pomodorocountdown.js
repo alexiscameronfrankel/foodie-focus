@@ -10,7 +10,8 @@ let alarm = new Audio("./alarm.mp3")
 class Pomodorocountdown extends Component {
 
     state = {
-        pomodoro: 0
+        pomodoro: 0,
+        timerLength: 1500000
     }
 
     playAlarm = () => {
@@ -22,7 +23,20 @@ changeRenderPomodoroAmount = () => {
     this.setState({
             
             
-        pomodoro: incrementedPomodoro
+        pomodoro: incrementedPomodoro,
+    
+    
+    })
+}
+
+addTime = (e) => {
+console.log('i am adding time')
+let addMinute = this.state.timerLength + 60000
+console.log(this.state.timerLength)
+    this.setState({
+            
+            
+       timerLength: addMinute,
     
     
     })
@@ -44,7 +58,7 @@ changeRenderPomodoroAmount = () => {
 
         <Timer
             className="mainTimerStyles"
-            initialTime={5000}
+            initialTime={this.state.timerLength}
             direction="backward"
             startImmediately={false}
             timeToUpdate={100}
@@ -84,6 +98,7 @@ changeRenderPomodoroAmount = () => {
                     <button className="mainTimerStylesButton"  onClick={resume}>Resume</button>
                     <button className="mainTimerStylesButton"  onClick={stop}>Stop</button>
                     <button className="mainTimerStylesButton"  onClick={reset}>Reset</button>
+                    
                 </div>
             </React.Fragment>
         )}
@@ -92,6 +107,8 @@ changeRenderPomodoroAmount = () => {
 
 
  {/* HERE IS WHERE I DISPLAY THE POMODOROS */}
+
+ {/* working on making this work ---> <button className="mainTimerStylesButton"  onClick={this.addTime}>+</button> */}
 
 
 
