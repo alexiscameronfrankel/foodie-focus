@@ -11,7 +11,7 @@ class Pomodorocountdown extends Component {
 
     state = {
         pomodoro: 0,
-        timerLength: 1500000
+       
     }
 
     playAlarm = () => {
@@ -58,7 +58,7 @@ console.log(this.state.timerLength)
 
         <Timer
             className="mainTimerStyles"
-            initialTime={this.state.timerLength}
+            initialTime={this.props.initialTime}
             direction="backward"
             startImmediately={false}
             timeToUpdate={100}
@@ -105,11 +105,9 @@ console.log(this.state.timerLength)
     </Timer>
 
 
-
- {/* HERE IS WHERE I DISPLAY THE POMODOROS */}
-
  {/* working on making this work ---> <button className="mainTimerStylesButton"  onClick={this.addTime}>+</button> */}
 
+ {/* HERE IS WHERE I DISPLAY THE POMODOROS */}
 
 
 <p className="pomodoroDisplayStyles">You have done {this.props.pomodoro} pomodoros</p>

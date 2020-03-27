@@ -19,7 +19,8 @@ class App extends Component {
     image: "",
     title_original:"",
     audio:"",
-    pomodoro: 0
+    pomodoro: 0,
+    initialTime: 1500000
 
   }
 
@@ -47,12 +48,23 @@ changeRenderPomodoroAmount = () => {
         category: input
     
     
-    }) 
-
-
-
-    
+    })   
 }
+
+  handlePersonInputtingWorkTime = (input) => {
+
+    console.log("app.js save TIME input to state")
+    
+    this.setState({
+        
+        
+        initialTime: input
+    
+    
+    })   
+  }
+
+
 
 
   render() {
@@ -61,9 +73,12 @@ changeRenderPomodoroAmount = () => {
       <div>
 
       <Switch>
-          <Route exact path="/" render={props => <Home {...props} handlePersonInputting={this.handlePersonInputting}/>}/> {/* says if url is homepage (/) then just show the home */}
-          <Route exact path="/maintimer" render={props => <Pomodorocountdown {...props} pomodoro ={this.state.pomodoro} changeRenderPomodoroAmount={this.changeRenderPomodoroAmount} allpodcasts={this.state.podcasts} alljokes={this.state.jokes}/>}/>
+          <Route exact path="/" render={props => <Home {...props} handlePersonInputting={this.handlePersonInputting} handlePersonInputtingWorkTime={this.handlePersonInputtingWorkTime}/>}/> {/* says if url is homepage (/) then just show the home */}
+
+          <Route exact path="/maintimer" render={props => <Pomodorocountdown {...props} pomodoro ={this.state.pomodoro} changeRenderPomodoroAmount={this.changeRenderPomodoroAmount} allpodcasts={this.state.podcasts} alljokes={this.state.jokes} initialTime={this.state.initialTime}/>}/>
+
           <Route exact path="/longbreak" render={props => <Longbreak {...props} categorychosen={this.state.category} allpodcasts={this.state.podcasts} alljokes={this.state.jokes} />}/>
+
           <Route exact path="/shortbreak" render={props => <Shortbreak  {...props} categorychosen={this.state.category} allpodcasts={this.state.podcasts} alljokes={this.state.jokes} />}/>
       </Switch>
 

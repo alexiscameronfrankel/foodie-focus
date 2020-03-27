@@ -7,11 +7,12 @@ import Typist from 'react-typist';
 class Home extends Component {
 
     state = {
-        name:""
+        name:"",
+        intialTime: 1500000
     }
 
     handlePersonTyping = (e) => {
-        
+        console.log('handlePersonTyping is being called')
         this.setState({
             
             
@@ -29,8 +30,10 @@ class Home extends Component {
       
         console.log('home.js submit')
         let category = this.state.name;
+        let initialTime = this.state.initialTime;
 
         this.props.handlePersonInputting(category)
+        this.props.handlePersonInputtingWorkTime(initialTime)
 
         this.props.history.push("/maintimer")
 
@@ -70,7 +73,7 @@ class Home extends Component {
                     </label> */}
                     
                         <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter podcast category here to get started" style={{width:'80%'}}/>
-                        
+                        <input type="number" id="fname" name="initialTime" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter work time in milliseconds" style={{width:'80%'}}/>
                         {/* <Link to="/maintimer"><input type="submit" value="Submit" className="submit_button"/> </Link> */}
                         <input type="submit" value="Submit" className="submit_button"/>
                         

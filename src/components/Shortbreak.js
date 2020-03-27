@@ -44,7 +44,7 @@ class Shortbreak extends Component {
   } 
 
   newGetRequestForPodcast = () => {
-    if(this.props.categorychosen !== "") {
+    if(this.props.categorychosen !== 'undefined') {
       
       axios.get(`https://listen-api.listennotes.com/api/v2/search?q=${this.props.categorychosen}&sort_by_date=0&type=episode&len_min=4&len_max=6&only_in=title%2Cdescription&language=English`,{headers: {'X-ListenAPI-Key': '4a61357b39b247419a27150332f26732'}}).then(res => { //This takes some time by the time it gets back 
       // console.log(res)
