@@ -178,7 +178,7 @@ class Longbreak extends Component {
 <Col>
 <div className="breakTimerContainer">
    <Timer
-            initialTime={3000}
+            initialTime={660000}
             direction="backward"
             startImmediately={false}
             timeToUpdate={100}

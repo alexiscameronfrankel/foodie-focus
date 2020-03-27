@@ -181,7 +181,7 @@ class Shortbreak extends Component {
 <Col>
 <div className="breakTimerContainer">
 <Timer
-        initialTime={2000}
+        initialTime={360000}
         direction="backward"
         startImmediately={false}
         timeToUpdate={100}
