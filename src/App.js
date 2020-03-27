@@ -20,7 +20,7 @@ class App extends Component {
     title_original:"",
     audio:"",
     pomodoro: 0,
-    initialTime: 1500000
+    initialTime:25000,
 
   }
 
@@ -54,11 +54,13 @@ changeRenderPomodoroAmount = () => {
   handlePersonInputtingWorkTime = (input) => {
 
     console.log("app.js save TIME input to state")
+
+    let minutesToMillisecondsInput = input * 60000
     
     this.setState({
         
         
-        initialTime: input
+        initialTime: minutesToMillisecondsInput
     
     
     })   

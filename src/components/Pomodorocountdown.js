@@ -11,7 +11,7 @@ class Pomodorocountdown extends Component {
 
     state = {
         pomodoro: 0,
-       
+        initialTime: this.props.initialTime
     }
 
     playAlarm = () => {
@@ -24,19 +24,6 @@ changeRenderPomodoroAmount = () => {
             
             
         pomodoro: incrementedPomodoro,
-    
-    
-    })
-}
-
-addTime = (e) => {
-console.log('i am adding time')
-let addMinute = this.state.timerLength + 60000
-console.log(this.state.timerLength)
-    this.setState({
-            
-            
-       timerLength: addMinute,
     
     
     })
@@ -105,7 +92,6 @@ console.log(this.state.timerLength)
     </Timer>
 
 
- {/* working on making this work ---> <button className="mainTimerStylesButton"  onClick={this.addTime}>+</button> */}
 
  {/* HERE IS WHERE I DISPLAY THE POMODOROS */}
 

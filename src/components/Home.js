@@ -8,7 +8,7 @@ class Home extends Component {
 
     state = {
         name:"",
-        intialTime: 1500000
+        intialTime: this.props.initialTime
     }
 
     handlePersonTyping = (e) => {
@@ -50,18 +50,18 @@ class Home extends Component {
             <div className="apply_viewport_height homeBackground">
                 <div className="home_container apply_viewport_height">
                 <img src="./tomatoman.png" alt="Logo" className="tomato_man" style={{ width: '90px'}}/>
-                <Card className="home_container " border="danger">
+                <Card className="home_container ">
                     <Card.Body style={{width: '450px'}}>
                     <Typist className="Typist">
                     Hello! I am a little tomato man and this is a pomodoro timer. 
                     <br/>
                     <br/>
-                    We'll work in <strong>25 minute intervals </strong> (pomodoros) with <strong>3 short breaks</strong>. After your <strong>fourth</strong> pomodoro, take a <strong>long break</strong> (you deserve it). Repeat as necessary!
-                    <br/>
+                    We'll work in intervals (pomodoros) with <strong>3 short breaks</strong>. Customize your work timer in the input below. After your <strong>fourth</strong> pomodoro, take a <strong>long break</strong> (you deserve it). Repeat as necessary!
+                    {/* <br/>
                     <br/>
                     Each pomodoro session will get easier~
                     <br/>
-                    <br/>
+                    <br/> */}
                     I've set up some podcasts and jokes for you during your break periods. <strong>Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!</strong>
                     
                     </Typist>
