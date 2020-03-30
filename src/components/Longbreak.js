@@ -11,6 +11,11 @@ import Row from 'react-bootstrap/Row'
 
 let alarm = new Audio("./alarm.mp3")
 
+//document.querySelector("#longBreakBackground > div.container > div > div:nth-child(1) > div > div:nth-child(1)").innerHTML.split("").join("-")
+
+//getting closer creating onClick function to customize time on the actual page above...if you don't remember what this is, past alexis, copy and paste into the console
+
+//what i think my next step is using a method to replace old minute time with new minute timer before the first < in the array (if i were to take off the .join) then join...you had a function before that updated the state onClick of the intialTime, but couldn't get to render...probably have to do something like that + DOM manipulation
 
 
 class Longbreak extends Component {
@@ -190,6 +195,10 @@ class Longbreak extends Component {
                 {
                     time: 0,
                     callback: () => console.log('alarm is sounding'), 
+                },
+                {
+                    time: 660000,
+                    callback: () => console.log('ajhjhunding'), 
                 },
                 // {
                 //     time: 0,
