@@ -26,6 +26,7 @@ class Longbreak extends Component {
         image: "",
         title_original:"",
         audio:"", 
+        longBreakTime: 660000
      
       }
 
@@ -77,7 +78,6 @@ class Longbreak extends Component {
     }
     
     
-      // 1. use math.random to pick a random podcast???
     
     
       
@@ -115,39 +115,31 @@ class Longbreak extends Component {
           )
         })
       }
-    
-    
-    //   handlePersonTyping = (e) => {
-        
-    //     this.setState({
-            
-            
-    //         [e.target.name]:e.target.value,
-        
-        
-    //     }) 
-    
-        
-    // }
-    
-
-
-    
+  
+    addTime = (e) => {
+      let newBreakTime = this.state.longBreakTime + 60000
+      console.log('new break time is being added', newBreakTime)
+      let longBreakSplit = document.querySelector("#longBreakBackground > div.container > div > div:nth-child(1) > div > div:nth-child(1)").innerHTML.split("")
+      console.log (longBreakSplit)
+      console.log(longBreakSplit.indexOf('<'))
+      let spliceHowMany = longBreakSplit.indexOf('<')
+      console.log(spliceHowMany)
+      // let newTimeSplit = longBreakSplit.splice(0,2,2)
+      // console.log(newTimeSplit, "knfsn")
+      console.log(typeof longBreakSplit)
+      longBreakSplit[0] = newBreakTime
+      let longBreakJoin = longBreakSplit.join("")
+      console.log(longBreakJoin)
+      console.log(newBreakTime)
+      this.setState({
+        longBreakTime: newBreakTime
+       }) 
+      document.querySelector("#longBreakBackground > div.container > div > div:nth-child(1) > div > div:nth-child(1)").innerHTML=longBreakJoin
+    }
     
           submitting = (e) => {
             e.preventDefault()
-            // this.setState({}
-            //   name:e.target.value
-              
-          
-          
-            // }) 
-          // console.log(this.state.name)
-          // console.log('submit button is being pressed for long break')
-          
-          
-          
-            // let category = this.state.name;
+      
           
             if(this.state.name !== "") {
           
@@ -183,12 +175,13 @@ class Longbreak extends Component {
 <Col>
 <div className="breakTimerContainer">
    <Timer
-            initialTime={660000}
+            initialTime={this.state.longBreakTime}
             direction="backward"
             startImmediately={false}
             timeToUpdate={100}
             checkpoints={[
                 {
+                  
                     time: 0,
                     callback: () => this.playAlarm(), 
                 },
@@ -196,10 +189,7 @@ class Longbreak extends Component {
                     time: 0,
                     callback: () => console.log('alarm is sounding'), 
                 },
-                {
-                    time: 660000,
-                    callback: () => console.log('ajhjhunding'), 
-                },
+         
                 // {
                 //     time: 0,
                 //     callback: () =>this.props.changeRenderPomodoroAmount(this.props.pomodoro),
@@ -231,6 +221,8 @@ class Longbreak extends Component {
                 <div>
                 <Link  to="/maintimer"><button className="breakContainerButtons" >Get Back To Work</button></Link>
                 </div>
+  {/*BELOW IS COMMENTED OUT CHANGE TIME BUTTON*/ }
+                {/* <button className="breakContainerButtons" onClick={this.addTime}>Change Time</button> */}
             </React.Fragment>
         )}
     </Timer>
@@ -253,10 +245,6 @@ class Longbreak extends Component {
         <div className="flexin">
             {this.showThePodcasts(this.state.podcasts)}
         </div>
-
-
-       
-
 
           </div>
         );
