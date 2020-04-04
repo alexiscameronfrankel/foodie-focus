@@ -117,7 +117,8 @@ class Longbreak extends Component {
       }
   
     addTime = (e) => {
-      let newBreakTime = this.state.longBreakTime + 60000
+      // this.state.longBreakTime + 60000
+      let newBreakTime = 4
       console.log('new break time is being added', newBreakTime)
       let longBreakSplit = document.querySelector("#longBreakBackground > div.container > div > div:nth-child(1) > div > div:nth-child(1)").innerHTML.split("")
       console.log (longBreakSplit)
@@ -130,7 +131,7 @@ class Longbreak extends Component {
       longBreakSplit[0] = newBreakTime
       let longBreakJoin = longBreakSplit.join("")
       console.log(longBreakJoin)
-      console.log(newBreakTime)
+      console.log(typeof newBreakTime)
       this.setState({
         longBreakTime: newBreakTime
        }) 
