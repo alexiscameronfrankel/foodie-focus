@@ -1,34 +1,4 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
- */
 
  .flexin{
    display:flex;
@@ -75,6 +45,7 @@
 
 .tomato_man{
   margin-bottom:-3px;
+  width:8%;
 }
 
 .submit_button{
@@ -276,4 +247,22 @@ line-height: 40px;
 
 .homeBackground{
   background-color: #B1EDE8;
+}
+
+form {
+  display: flex;
+  font-size: 80%;
+}
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 900px), screen and (max-height:500px){ 
+
+.tomato_man {
+  width:15%;
+  }
+.Typist{
+    font-size: 80%;
+  }
+
 }

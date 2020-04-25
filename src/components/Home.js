@@ -43,13 +43,11 @@ class Home extends Component {
 
 
 
-
-
     render() {
         return (
             <div className="apply_viewport_height homeBackground">
                 <div className="home_container apply_viewport_height">
-                <img src="./tomatoman.png" alt="Logo" className="tomato_man" style={{ width: '90px'}}/>
+                <img src="./tomatoman.png" alt="Logo" className="tomato_man" />
                 <Card className="home_container ">
                     <Card.Body style={{width: '450px'}}>
                     <Typist className="Typist">
@@ -72,7 +70,7 @@ class Home extends Component {
                     {/* <label className="home-main_text">
                     </label> */}
                     
-                        <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter podcast category here to get started" style={{width:'80%'}}/>
+                        <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter podcast category here" style={{width:'80%'}}/>
                         <input type="number" id="fname" name="initialTime" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter work time in minutes" style={{width:'80%'}}/>
                         {/* <Link to="/maintimer"><input type="submit" value="Submit" className="submit_button"/> </Link> */}
                         <input type="submit" value="Submit" className="submit_button"/>
