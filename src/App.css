@@ -254,6 +254,9 @@ form {
   font-size: 80%;
 }
 
+.card-body{
+  width: 450px;
+}
 /*MEDIA QUERIES*/
 
 @media all and (max-width: 900px), screen and (max-height:500px){ 
@@ -264,5 +267,7 @@ form {
 .Typist{
     font-size: 80%;
   }
-
+  .card-body{
+    width: 50vh;
+  }
 }
