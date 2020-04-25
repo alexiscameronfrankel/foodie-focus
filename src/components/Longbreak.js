@@ -223,7 +223,7 @@ class Longbreak extends Component {
                         <Link to="/maintimer"><button className="breakContainerButtons" >Get Back To Work</button></Link>
                       </div>
                       {/*BELOW IS COMMENTED OUT CHANGE TIME BUTTON*/}
-                      <button className="breakContainerButtons" onClick={this.addTime}>Change Time</button>
+                      {/* <button className="breakContainerButtons" onClick={this.addTime}>Change Time</button> */}
                     </React.Fragment>
                   )}
                 </Timer>
