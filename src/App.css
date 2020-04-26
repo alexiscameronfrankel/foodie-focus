@@ -270,4 +270,12 @@ form {
   .card-body{
     width: 50vh;
   }
+  form {
+    font-size: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  input{
+  width:100%;  
+  }
 }
