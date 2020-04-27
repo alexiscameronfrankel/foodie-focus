@@ -70,8 +70,8 @@ class Home extends Component {
                     {/* <label className="home-main_text">
                     </label> */}
                     
-                        <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter podcast category here" style={{width:'80%'}}/>
-                        <input type="number" id="fname" name="initialTime" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter work time in minutes" style={{width:'80%'}}/>
+                        <input type="text" id="fname" name="name" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter podcast category here"/>
+                        <input type="number" id="fname" name="initialTime" onChange={this.handlePersonTyping} className="home-main_input" placeholder="Enter work time in minutes"/>
                         {/* <Link to="/maintimer"><input type="submit" value="Submit" className="submit_button"/> </Link> */}
                         <input type="submit" value="Submit" className="submit_button"/>
                         
