@@ -296,4 +296,11 @@ input {
   .Typist{
     font-size: 0;
   }
+  .form-style{
+    padding: 0;
+  }
+  .submit_button{
+    margin: 0 auto;
+    padding:0;
+  }
 }
