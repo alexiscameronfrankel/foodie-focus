@@ -261,12 +261,17 @@ input {
 .card-body{
   width: 700px;
 }
+
+.form-style{
+  padding-top:20px;
+}
 /*MEDIA QUERIES*/
 
 @media all and (max-width: 900px), screen and (max-height:500px){ 
 
 .tomato_man {
   width:15%;
+  margin-bottom: 0px;
   }
 .Typist{
     font-size: 80%;

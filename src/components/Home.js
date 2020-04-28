@@ -63,9 +63,7 @@ class Home extends Component {
                     I've set up some podcasts and jokes for you during your break periods. <strong>Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!</strong>
                     
                     </Typist>
-                    <br/>
-                    <br/>
-                    <div>
+                    <div className="form-style"> 
                         <form onSubmit={this.submitting}>
                     {/* <label className="home-main_text">
                     </label> */}
