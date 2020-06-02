@@ -48,11 +48,11 @@ class Home extends Component {
             <div className="apply_viewport_height homeBackground">
                 <div className="home_container apply_viewport_height">
                 <img src="./tomatoman.png" alt="Logo" className="tomato_man" />
-                <Card className="home_container ">
+                <Card className="home_container">
                     <Card.Body className="card-body">
                     <Typist className="Typist">
-                    Hello! I am a little tomato man and this is a pomodoro timer. 
-                    <br/>
+                        Hello! I am a little tomato man and this is a pomodoro timer. 
+                    </Typist>
                     <br/>
                     We'll work in intervals (pomodoros) with <strong>3 short breaks</strong>. Customize your work timer in the input below. After your <strong>fourth</strong> pomodoro, take a <strong>long break</strong> (you deserve it). Repeat as necessary!
                     {/* <br/>
@@ -62,7 +62,7 @@ class Home extends Component {
                     <br/> */}
                     I've set up some podcasts and jokes for you during your break periods. <strong>Choose a podcast genre (ex: meditation, nutrition, dogs) to get started!</strong>
                     
-                    </Typist>
+                
                     <div className="form-style"> 
                         <form onSubmit={this.submitting}>
                     {/* <label className="home-main_text">
