@@ -232,9 +232,9 @@ line-height: 40px;
   box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .5);
 }
 
-#cardTitle{
+/* #cardTitle{
   font-size:20px;
-}
+} */
 
 .Typist{
   font-size: 18px;
@@ -318,4 +318,8 @@ input {
   .card-body{
       width: 75vw;
     }
+}
+
+.widthFix {
+  width: 600px;
 }
